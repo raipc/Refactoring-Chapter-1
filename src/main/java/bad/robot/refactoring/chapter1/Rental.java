@@ -1,11 +1,11 @@
 package bad.robot.refactoring.chapter1;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.Getter;
 
+@Getter
 public class Rental {
 
-    private Movie movie;
+    private final Movie movie;
     private int daysRented;
 
     public Rental(Movie movie, int daysRented) {
@@ -13,12 +13,12 @@ public class Rental {
         this.daysRented = daysRented;
     }
 
-    public Movie getMovie() {
-        return movie;
+    public double calculateAmount() {
+        return movie.getPrice().calculateAmount(daysRented);
     }
 
-    public int getDaysRented() {
-        return daysRented;
+    public int calculateRenterPoints() {
+        return movie.getPrice().calculateRenterPoints(daysRented);
     }
 
 }
