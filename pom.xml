@@ -15,6 +15,10 @@
             <id>toby</id>
             <url>http://pequenoperro.blogspot.com/</url>
         </developer>
+        <developer>
+            <name>Anton Rybochkin</name>
+            <id>raipc</id>
+        </developer>
     </developers>
 
     <build>
